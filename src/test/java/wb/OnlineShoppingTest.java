@@ -36,8 +36,6 @@ public class OnlineShoppingTest {
     @Test
     public void addingItemInBasketTest() {
 
-        String productUrl = "https://www.wildberries.by/catalog/264220770/detail.aspx";
-
         String productId = "264220770";
         ProductPage productPage = new ProductPage(chromeDriver);
         BasketPage basketPage = new BasketPage(chromeDriver);

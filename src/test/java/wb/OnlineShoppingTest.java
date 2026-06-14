@@ -14,18 +14,13 @@ import java.time.Duration;
 public class OnlineShoppingTest {
 
     protected WebDriver chromeDriver;
-    protected WebDriverWait wait;
 
     @BeforeMethod
     public void before(){
-
         ChromeOptions chromeOptions = new ChromeOptions();
-        System.setProperty("webdriver.chrome.driver", System.getenv("CHROME_DRIVER"));
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--disable-notifications");
         chromeDriver = new ChromeDriver(chromeOptions);
-
-        this.wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(20));
     }
 
     @AfterMethod

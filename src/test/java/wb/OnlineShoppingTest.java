@@ -1,5 +1,6 @@
 package wb;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,6 +16,8 @@ public class OnlineShoppingTest {
 
     @BeforeMethod
     public void before(){
+        WebDriverManager.chromedriver().setup();
+
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--disable-notifications");
